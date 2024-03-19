@@ -1,11 +1,14 @@
-import React, { useEffect,useState } from 'react';
+import React, { useEffect,useState ,Link} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './swiper.css'
+import { NavLink } from 'react-router-dom';
 
 
 export default function Categories() {
   const [products,setProducts]= useState([]);
+  
+  
   const getProducts = async ()=>{
     const response = await fetch(`https://ecommerce-node4.vercel.app/categories/active?page=1&limit=10`);
     const data = await response.json();
@@ -27,8 +30,12 @@ export default function Categories() {
     >
       {
         products.map( product=>
-          <SwiperSlide key={product.id}>
-            <img src={product.image.secure_url}/>
+          <SwiperSlide key={product._id}>
+      
+
+
+            <NavLink to={`products/${product._id}`}><img src={product.image.secure_url}/></NavLink>
+          
             
           </SwiperSlide>
 

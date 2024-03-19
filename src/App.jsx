@@ -7,6 +7,7 @@ import Signup from './Signup/Signup.jsx';
 import Products from './Products/Products.jsx';
 import Cart from './Cart/Cart.jsx';
 import NotFound from './NotFound/NotFound.jsx';
+import Register from './register/Register';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,16 +24,18 @@ const router = createBrowserRouter([
         path:"/signup",
         element:<Signup/>
       },{
-        path:"/products",
+        path:"/products/:id",
         element:<Products/>
       },
       {
         path:"/cart",
         element:<Cart/>
       },{
-        path:"/categories",
-        element:<Categories/>
-      },{
+        path:"/register",
+        element:<Register/>
+
+      },
+      {
         path:"*",
         element:<NotFound/>
       }

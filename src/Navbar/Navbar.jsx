@@ -15,20 +15,20 @@ export default function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/signin"tabIndex={-1} aria-disabled="true">Signin</NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/signup" tabIndex={-1} aria-disabled="true">Signup</NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/" tabIndex={-1} aria-disabled="true">Categories</NavLink>
-        </li>
+        
+       
         <li className="nav-item">
           <NavLink className="nav-link " to="/products" tabIndex={-1} aria-disabled="true">Products</NavLink>
         </li>
         <li className="nav-item">
           <NavLink className="nav-link " to="/cart" tabIndex={-1} aria-disabled="true">Cart</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/signin"tabIndex={-1} aria-disabled="true">Signin</NavLink>
+        </li>
+       
+        <li className="nav-item">
+          <NavLink className="nav-link " to="/register" tabIndex={-1} aria-disabled="true">Sign Up</NavLink>
         </li>
       </ul>
     
